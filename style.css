@@ -1,0 +1,96 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: sans-serif;
+}
+body {
+	width: 100%;
+	height: 100vh;
+	background-color: beige;
+}
+h1 {
+	user-select: none;
+	margin: 20PX auto;
+    width: 50%;
+    COLOR: floralwhite;
+    background: darkcyan;
+    text-align: center;
+    padding: 5px;
+    font-weight: 800;
+}
+p {
+    width: 45%;
+    margin: 20px auto;
+    padding-top: 20px;
+    text-align: justify;
+    line-height: 19px;
+    font-size: 18px;
+}
+#main {
+	position: relative;
+	top: 20%;
+}
+.marquee {
+	background: url(pic4.png);
+	width: 60%;
+	white-space: nowrap;
+	margin: 0 auto;
+	overflow: hidden;
+	user-select: none;
+	border: 2px solid grey;
+}
+.marquee img {
+	display: inline-block;
+	width: 150px;
+	height: 150px;
+	position: relative;
+	left: 100%;
+	animation: item 8s linear infinite;
+	color: whitesmoke;
+	border: 5px solid #4169e157;
+	background: linear-gradient(45deg, #1b26cc, #c03838);
+    padding: 8px;
+    margin-bottom: 0;
+    margin-top: -15px
+} 
+.marquee:hover img {
+	animation-play-state: paused;
+}
+ .marquee img:nth-child(1){
+ 	animation-delay: 0s;
+ }
+.marquee img:nth-child(2){
+ 	animation-delay: 0.8s;	
+ }
+.marquee img:nth-child(3){
+ 	animation-delay: 1.6s;
+ }
+.marquee img:nth-child(4){
+ 	animation-delay: 2.4s;
+ }
+.marquee img:nth-child(5){
+ 	animation-delay: 3.2s;
+ }
+
+
+ @keyframes item 
+ {
+ 	0% {
+ 		left: 100%;
+ 	}
+ 	100% {
+ 		left: -100%;
+ 	}
+ }
+
+ 
+ @media only screen and (max-width: 700px)
+ {
+ 	body {
+ 	background-color: rgba(245, 20, 80, 1.0);
+ 	}
+ 	p {
+ 		color: floralwhite;
+ 	}
+ }
